@@ -1,0 +1,276 @@
+@import "../variables/variables";
+@import "../sass2/extend";
+@import "../sass2/mixins";
+
+.grid-disco {
+	display: grid;
+	margin-left: 5%;
+	margin-right: 5%;
+	grid-template-columns: repeat(3, 32%);
+	grid-template-rows: repeat(2, 45%);
+	gap: 20px;
+	grid-template-areas:
+		"disco1 disco1 disco1"
+		"disco2 disco2 disco2";
+}
+.disco1 {
+	grid-area: disco1;
+	@include discos;
+	.arriba {
+		display: flex;
+		flex-direction: row;
+		img {
+			height: 310px;
+			width: 300px;
+			border-radius: $border-radius;
+		}
+		div {
+			margin-top: 62px;
+			margin-left: 20px;
+			color: $color2;
+			h2 {
+				font-size: 55px;
+				font-family: $font-family1;
+			}
+			h3 {
+				font-family: $font-family2;
+			}
+
+			.logos {
+				margin: 0;
+				margin-top: 45px;
+				img {
+					padding: 0.5px;
+					margin-bottom: 10px;
+					height: 40px;
+					width: 40px;
+					background-color: $color4;
+				}
+			}
+			p {
+				margin-top: 5px;
+				padding: 5px;
+				font-family: $font-family2;
+				background-color: $color4;
+				border-radius: $border-radius;
+				font-weight: $font-weight;
+			}
+		}
+	}
+	.masdisco {
+		margin: 0;
+		margin-left: 30px;
+		width: 300px;
+		text-align: center;
+		color: $color2;
+		ol {
+			font-size: 18px;
+			font-family: $font-family1;
+			li {
+				margin-top: 5px;
+				font-size: 15px;
+				font-family: $font-family2;
+			}
+		}
+	}
+}
+.disco2 {
+	grid-area: disco2;
+	@include discos;
+	.arriba {
+		display: flex;
+		flex-direction: row;
+		img {
+			height: 310px;
+			width: 300px;
+			border-radius: $border-radius;
+		}
+		div {
+			margin-top: 77px;
+			margin-left: 20px;
+			color: $color2;
+			h2 {
+				font-size: 45px;
+				font-family: $font-family1;
+			}
+			h3 {
+				font-family: $font-family2;
+			}
+
+			.logos {
+				margin: 0;
+				margin-top: 45px;
+				img {
+					margin-bottom: 10px;
+					padding: 0.5px;
+					height: 40px;
+					width: 40px;
+					background-color: $color5;
+				}
+			}
+
+			p {
+				margin-top: 5px;
+				padding: 5px;
+				font-family: $font-family2;
+				font-weight: $font-weight;
+				background-color: $color5;
+				border-radius: $border-radius;
+			}
+		}
+	}
+	.masdisco {
+		margin: 0;
+		margin-left: 30px;
+		width: 300px;
+		text-align: center;
+		color: $color2;
+		ol {
+			font-size: 18px;
+			font-family: $font-family1;
+			li {
+				margin-top: 5px;
+				font-size: 15px;
+				font-family: $font-family2;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 320px) {
+	.grid-disco {
+		display: grid;
+		margin: 10px;
+		grid-template-columns: 300px;
+		grid-template-rows: repeat(2, 800px);
+		gap: 5px;
+		grid-template-areas:
+			"disco1"
+			"disco2";
+	}
+	.disco1 {
+		grid-area: disco1;
+		@include discos-query;
+		.arriba {
+			display: flex;
+			flex-direction: column;
+			img {
+				height: 220px;
+				width: 295px;
+				border-radius: $border-radius;
+			}
+			div {
+				margin-top: 40px;
+				margin-left: 20px;
+				margin-bottom: 20px;
+				color: $color2;
+				h2 {
+					font-size: 30px;
+					font-family: $font-family1;
+				}
+				h3 {
+					font-family: $font-family2;
+				}
+
+				.logos {
+					margin: 0;
+					margin-top: 45px;
+					img {
+						margin-bottom: 10px;
+						padding: 0.5px;
+						height: 40px;
+						width: 40px;
+						background-color: $color4;
+					}
+				}
+				p {
+					margin-top: 5px;
+					padding: 5px;
+					font-family: $font-family2;
+					font-weight: $font-weight;
+					background-color: $color4;
+					border-radius: $border-radius;
+				}
+			}
+		}
+		.masdisco {
+			margin: 0;
+			margin-left: 40px;
+			width: 200px;
+			text-align: left;
+			color: $color2;
+			ol {
+				font-size: 15px;
+				font-family: $font-family1;
+				li {
+					margin-top: 2px;
+					font-size: 12px;
+					font-family: $font-family2;
+				}
+			}
+		}
+	}
+
+	.disco2 {
+		grid-area: disco2;
+		@include discos-query;
+		.arriba {
+			display: flex;
+			flex-direction: column;
+			img {
+				height: 220px;
+				width: 295px;
+				border-radius: $border-radius;
+			}
+			div {
+				margin-top: 40px;
+				margin-left: 20px;
+				margin-bottom: 20px;
+				color: $color2;
+				h2 {
+					font-size: 30px;
+					font-family: $font-family1;
+				}
+				h3 {
+					font-family: $font-family2;
+				}
+
+				.logos {
+					margin: 0;
+					margin-top: 45px;
+					img {
+						margin-bottom: 10px;
+						padding: 0.5px;
+						height: 40px;
+						width: 40px;
+						background-color: $color5;
+					}
+				}
+				p {
+					margin-top: 5px;
+					font-family: $font-family2;
+					font-weight: $font-weight;
+					background-color: $color5;
+					border-radius: $border-radius;
+					padding: 5px;
+				}
+			}
+		}
+		.masdisco {
+			margin: 0;
+			margin-left: 40px;
+			width: 200px;
+			text-align: left;
+			color: $color2;
+			ol {
+				font-size: 15px;
+				font-family: $font-family1;
+				li {
+					margin-top: 5px;
+					font-size: 12px;
+					font-family: $font-family2;
+				}
+			}
+		}
+	}
+}
